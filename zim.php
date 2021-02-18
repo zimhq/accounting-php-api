@@ -30,6 +30,11 @@ class ZimAccounting {
     return $this->get($this->url . '/api/get_categories', $data);
   }
 
+  function get_users($token) {
+    $data = array('token' => $token);
+    return $this->get($this->url . '/api/get_users', $data);
+  }
+
   function get_items($token) {
     $data = array('token' => $token);
     return $this->get($this->url . '/api/get_items', $data);
