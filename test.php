@@ -11,4 +11,4 @@ $token = $login->token;
 // echo $zim->get_items($token);
 // echo $zim->get_users($token);
 // echo $zim->save_category($token, array('name' => 'test'));
-echo $zim->save_item($token, array('name' => 'test', 'code' => '001', 'price' => 12));
+// echo $zim->save_item($token, array('name' => 'test', 'code' => '001', 'price' => 12));
