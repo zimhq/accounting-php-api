@@ -41,9 +41,13 @@ class ZimAccounting {
   }
 
   function save_item($token, $item) {
-    $item = to_object($item);
-    $data = array('token' => $token, 'name' => $item->name, 'code' => $item->code, 'price' => $item->price);
-    return $this->post($this->url . '/api/save_item', $data);
+    $item['token'] = $token;
+    return $this->post($this->url . '/api/save_item', $item);
+  }
+
+  function save_category($token, $category) {
+    $category['token'] = $token;
+    return $this->post($this->url . '/api/save_category', $category);
   }
 
   private function get($url, $data) {
